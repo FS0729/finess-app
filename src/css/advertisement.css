@@ -1,0 +1,61 @@
+body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+}
+
+header {
+    width: 100%;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    background: url('../img/advertisement-bg.jpg') no-repeat;
+    background-size: cover;
+    background-position: calc(40%);
+    position: relative;
+}
+
+main div {
+    width: 6.5625rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 1.25rem;
+    position: absolute;
+    top: 1.25rem;
+    right: .625rem;
+}
+
+@keyframes jump {
+    0% {
+        transform: translate(0px, 0px);
+        transform: scale(.1)
+    }
+    50% {
+        transform: translate(0px, 250px);
+    }
+    75% {
+        transform: translate(0px, 220px);
+    }
+    100% {
+        transform: translate(0px, 250px);
+    }
+}
+
+main p {
+    color: #fff;
+    font-size: 48px;
+    text-align: center;
+    margin-top: 18.75rem;
+    transform-origin: center .625rem;
+    animation: jump 3s forwards;
+}

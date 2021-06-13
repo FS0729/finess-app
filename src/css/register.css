@@ -1,0 +1,108 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+    background: url('../img/sign-bg.jpg') no-repeat;
+    background-size: cover;
+    color: #FFF;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: 5rem;
+    line-height: 5rem;
+    font-size: 1.25rem;
+    padding-right: 1.25rem;
+}
+
+.title {
+    width: 100%;
+    height: 6.875rem;
+    padding-left: 8%;
+    color: #fff;
+}
+
+.title p:first-child {
+    font-size: 1.75rem;
+}
+
+.title p:last-child {
+    font-size: 1rem;
+    opacity: .6;
+    margin-top: .625rem;
+}
+
+.bottom {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 23.125rem;
+}
+
+.bottom input {
+    width: 21.875rem;
+    height: 3.125rem;
+    border-radius: 1.5625rem;
+    margin-bottom: 1.25rem;
+    background-color: rgba(129, 129, 129, 0.8);
+    text-indent: 1.875rem;
+}
+
+.bottom div {
+    width: 21.875rem;
+    height: 3.125rem;
+    border-radius: 1.5625rem;
+    margin-bottom: 1.25rem;
+}
+
+.reg {
+    display: flex;
+    justify-content: space-between;
+}
+
+.reg input {
+    width: 13.3125rem;
+    height: 3.125rem;
+}
+
+.reg span {
+    display: inline-block;
+    width: 7.6875rem;
+    height: 3.125rem;
+    line-height: 3.125rem;
+    text-align: center;
+    background-color: pink;
+    font-size: 2.5rem;
+}
+
+.bottom input::placeholder {
+    color: #fff;
+}
+
+.bottom input:nth-of-type(4) {
+    background-color: rgb(75, 238, 145);
+    color: #fff;
+}
+
+.bottom p {
+    display: flex;
+    justify-content: flex-end;
+    width: 80%;
+    height: 1.25rem;
+}
+
+.bottom i {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.footer {
+    text-align: center;
+    font-size: .75rem;
+    margin-top: 9.375rem;
+}

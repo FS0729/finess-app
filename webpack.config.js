@@ -14,8 +14,12 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 module.exports = {
     // 入口
     entry: {
+        // 公用css
+        commonCSS: './src/js/commonCSS.js',
         index: './src/js/index.js',
-        login: './src/js/login.js'
+        login: './src/js/login.js',
+        advertisement: './src/js/advertisement.js',
+        register: './src/js/register.js'
     },
     // 出口
     output: {
@@ -71,17 +75,29 @@ module.exports = {
         ]
     },
     plugins: [
-        // index.js
+        //主页 index.js
         new HtmlWebpackPlugin({
             template: './src/page/index.html',
             filename: 'index.html',
-            chunks: ['index']
+            chunks: ['index', 'commonCSS']
         }),
-        // login.html
+        // 登录页login.html
         new HtmlWebpackPlugin({
             template: './src/page/login.html',
             filename: 'login.html',
-            chunks: ['login']
+            chunks: ['login', 'commonCSS']
+        }),
+        // 广告页 advertisement.html
+        new HtmlWebpackPlugin({
+            template: './src/page/advertisement.html',
+            filename: 'advertisement.html',
+            chunks: ['advertisement', 'commonCSS']
+        }),
+        // 注册页 register
+        new HtmlWebpackPlugin({
+            template: './src/page/register.html',
+            filename: 'register.html',
+            chunks: ['register', 'commonCSS']
         }),
         new MiniCssExtractPlugin({
             filename: 'css/[name].css' // 输出到css文件夹里
@@ -100,7 +116,7 @@ module.exports = {
         port: 666,  // 端口  8080 80  8081 8082
         open: true, // 自动打开服务
         publicPath: '/', // 静态资源查找路径
-        openPage: 'index.html', // 打开的页面
+        openPage: 'login.html', // 打开的页面
     },
     target: 'web', // 目标是浏览器
 }
