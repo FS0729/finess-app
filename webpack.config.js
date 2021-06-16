@@ -16,6 +16,15 @@ module.exports = {
     entry: {
         // 公用css
         commonCSS: './src/js/commonCSS.js',
+        dom: './src/js/common/dom.js',
+        http: './src/js/common/http.js',
+        utils: './src/js/common/utils.js',
+
+        //三方插件
+        captcha: './src/lib/captcha/captcha-mini.js',
+        swiper: './src/lib/swiper/swiper-bundle.js',
+
+        //多页面
         index: './src/js/index.js',
         login: './src/js/login.js',
         advertisement: './src/js/advertisement.js',
@@ -79,25 +88,25 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './src/page/index.html',
             filename: 'index.html',
-            chunks: ['index', 'commonCSS']
+            chunks: ['index', 'commonCSS', 'dom', 'swiper']
         }),
         // 登录页login.html
         new HtmlWebpackPlugin({
             template: './src/page/login.html',
             filename: 'login.html',
-            chunks: ['login', 'commonCSS']
+            chunks: ['login', 'commonCSS', 'dom', 'http', 'utils']
         }),
         // 广告页 advertisement.html
         new HtmlWebpackPlugin({
             template: './src/page/advertisement.html',
             filename: 'advertisement.html',
-            chunks: ['advertisement', 'commonCSS']
+            chunks: ['advertisement', 'commonCSS', 'dom']
         }),
         // 注册页 register
         new HtmlWebpackPlugin({
             template: './src/page/register.html',
             filename: 'register.html',
-            chunks: ['register', 'commonCSS']
+            chunks: ['register', 'commonCSS', 'dom', 'captcha', 'http', 'utils']
         }),
         new MiniCssExtractPlugin({
             filename: 'css/[name].css' // 输出到css文件夹里
@@ -108,15 +117,14 @@ module.exports = {
     // mode环境
     mode: 'development',
 
-
     // 开发服务器 配置【】
     devServer: {
         contentBase: path.resolve(__dirname, 'dist'), // 启动服务器目录
         compress: true, // 启动gzip
-        port: 666,  // 端口  8080 80  8081 8082
+        port: 8080,  // 端口  8080 80  8081 8082
         open: true, // 自动打开服务
         publicPath: '/', // 静态资源查找路径
-        openPage: 'login.html', // 打开的页面
+        openPage: 'index.html', // 打开的页面
     },
     target: 'web', // 目标是浏览器
 }

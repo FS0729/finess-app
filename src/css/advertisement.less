@@ -1,11 +1,3 @@
-body {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-content: flex-start;
-}
-
 header {
     width: 100%;
     height: 44px;
@@ -14,25 +6,32 @@ header {
 }
 
 main {
-    width: 100%;
-    height: 100%;
-    flex: 1;
     background: url('../img/advertisement-bg.jpg') no-repeat;
     background-size: cover;
-    background-position: calc(40%);
+    background-position: top center;
     position: relative;
 }
 
 main div {
-    width: 6.5625rem;
-    height: 2.5rem;
-    line-height: 2.5rem;
-    text-align: center;
+    width: 105px;
+    height: 40px;
     background-color: #fff;
-    border-radius: 1.25rem;
+    border-radius: 20px;
+    padding: 10px;
     position: absolute;
-    top: 1.25rem;
-    right: .625rem;
+    top: 28px;
+    right: 14px;
+}
+
+main p:first-child {
+    flex: 2;
+    text-align: center;
+    border-right: 1px solid #bbb;
+}
+
+main p:last-child {
+    flex: 3;
+    text-align: center;
 }
 
 @keyframes jump {
@@ -48,14 +47,17 @@ main div {
     }
     100% {
         transform: translate(0px, 250px);
+        font-size: 48px;
+        opacity: 1;
     }
 }
 
-main p {
+main>p {
     color: #fff;
-    font-size: 48px;
+    font-size: 0px;
+    opacity: 0;
     text-align: center;
-    margin-top: 18.75rem;
+    margin-top: 250px;
     transform-origin: center .625rem;
     animation: jump 3s forwards;
 }

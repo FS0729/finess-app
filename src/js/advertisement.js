@@ -1,19 +1,58 @@
 // 导入
-require('../css/advertisement.css')
+require('../css/advertisement.less')
 
-let time = document.querySelector('.time')
-let jumpBtn = document.querySelector('.jump')
-// let index = 5
-// let t = setInterval(() => {
-//     index--
-//     if (index <= 1) {
-//         clearInterval(t)
-//     }
-//     time.innerHTML = index + 's'
-// }, 1000);
-// setTimeout(function () {
-//     location.href = './index.html'
-// }, 5000)
-jumpBtn.addEventListener('click', function () {
-    location.href = './login.html'
+document.ready(function () {
+    // 倒计时+跳转
+
+    let time = document.querySelector('.time span')
+    let jumpBtn = document.querySelector('.jump')
+    let t = setInterval(() => {
+        if (parseInt(time.textContent - 1) === 0) {
+            clearInterval(t)
+            location.href = './index.html'
+        } else {
+            let num = parseInt(time.textContent) - 1
+            time.textContent = num
+        }
+    }, 1000);
+
+    // 点击跳转
+    jumpBtn.addEventListener('click', function (ev) {
+        location.href = './login.html'
+    })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 })

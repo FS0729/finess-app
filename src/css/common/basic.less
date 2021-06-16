@@ -1,0 +1,33 @@
+/*
+ * 可复用的公有布局
+ */
+
+/* toast 提示 */
+
+.toast {
+    width: 150px;
+    height: 150px;
+    padding: 10px;
+    position: absolute;
+    top: calc(50% - 75px);
+    left: calc(50% -75px);
+    background: rgba(0, 0, 0, .7);
+    border-radius: 10px;
+    .icon{
+        width: 100%;
+        height: 80px;
+        line-height: 80px;
+        font-size: 40px;
+        text-align: center;
+    }
+    .toast-text{
+        width: 100%;
+        height: 40px;
+        line-height: 20px;
+        text-align: center;
+        overflow:hidden;
+        text-overflow:ellipsis;
+        -webkit-box-orient:vertical;
+        -webkit-line-clamp:2;
+    }
+}
