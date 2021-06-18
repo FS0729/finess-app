@@ -28,7 +28,13 @@ module.exports = {
         index: './src/js/index.js',
         login: './src/js/login.js',
         advertisement: './src/js/advertisement.js',
-        register: './src/js/register.js'
+        register: './src/js/register.js',
+        mine: './src/js/mine.js',
+        sports: './src/js/sports.js',
+        drill: './src/js/drill.js',
+        amend: './src/js/amend.js',
+        introduce: './src/js/introduce.js',
+        sportsdata: './src/js/sportsdata.js'
     },
     // 出口
     output: {
@@ -88,7 +94,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './src/page/index.html',
             filename: 'index.html',
-            chunks: ['index', 'commonCSS', 'dom', 'swiper']
+            chunks: ['index', 'commonCSS', 'dom', 'swiper', 'utils', 'http']
         }),
         // 登录页login.html
         new HtmlWebpackPlugin({
@@ -108,6 +114,42 @@ module.exports = {
             filename: 'register.html',
             chunks: ['register', 'commonCSS', 'dom', 'captcha', 'http', 'utils']
         }),
+        // 运动页
+        new HtmlWebpackPlugin({
+            template: './src/page/sports.html',
+            filename: 'sports.html',
+            chunks: ['sports', 'commonCSS', 'dom', 'http', 'utils']
+        }),
+        // 我的
+        new HtmlWebpackPlugin({
+            template: './src/page/mine.html',
+            filename: 'mine.html',
+            chunks: ['mine', 'commonCSS', 'dom', 'http', 'utils']
+        }),
+        // 训练
+        new HtmlWebpackPlugin({
+            template: './src/page/drill.html',
+            filename: 'drill.html',
+            chunks: ['drill', 'commonCSS', 'dom', 'http', 'utils']
+        }),
+        // 修改
+        new HtmlWebpackPlugin({
+            template: './src/page/amend.html',
+            filename: 'amend.html',
+            chunks: ['amend', 'commonCSS', 'dom', 'http', 'utils']
+        }),
+        // 运动数据
+        new HtmlWebpackPlugin({
+            template: './src/page/sportsdata.html',
+            filename: 'sportsdata.html',
+            chunks: ['sportsdata', 'commonCSS', 'dom', 'http']
+        }),
+        // 介绍
+        new HtmlWebpackPlugin({
+            template: './src/page/introduce.html',
+            filename: 'introduce.html',
+            chunks: ['introduce', 'commonCSS', 'dom', 'http', 'utils']
+        }),
         new MiniCssExtractPlugin({
             filename: 'css/[name].css' // 输出到css文件夹里
         }),
@@ -124,7 +166,7 @@ module.exports = {
         port: 8080,  // 端口  8080 80  8081 8082
         open: true, // 自动打开服务
         publicPath: '/', // 静态资源查找路径
-        openPage: 'index.html', // 打开的页面
+        openPage: 'login.html', // 打开的页面
     },
     target: 'web', // 目标是浏览器
 }

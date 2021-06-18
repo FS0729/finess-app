@@ -1,9 +1,9 @@
 .swiper-container{
     width: 100%;
     height: 200px;
-    background-color: red;
 }
 main{
+    padding: 0 15px;
     justify-content: space-around;
     flex-wrap: wrap;
     overflow-y: scroll;
@@ -12,6 +12,9 @@ main{
     width: 100%;
     height: 200px;
 }
+.swiper-container{
+    --swiper-pagination-color: #333333 ;
+  }
 .bg1{
     background: url('../img/index-swiper-bg1.jpg');
     background-size: cover;
@@ -24,41 +27,93 @@ main{
     background: url('../img/index-swiper-bg3.jpg');
     background-size: cover;
 }
-.left{
-        width: 40%;
-        height: 150px;
-        background-color: plum;
+.box-contant{
+    width: 100%;
+    height: 150px;
+    .left{
+        flex: 2;
+        position: relative;
+        background: #54AFD9 1%  url('../img/index-card-rank.png')no-repeat;
+        background-size: 70%;
+        background-position: left bottom;
     }
-.right{
-        width: 50%;
-        height: 150px;
-        background-color: salmon;
+    .right{
+        flex: 3;
+        position: relative;
+        background:#7BCBF5 url('../img/index-card-sum.png')no-repeat;
+        background-size: 60%;
+        background-position: 10px 10px;
     }
+}
 
-
-.left1{
-        width: 40%;
-        height: 110px;
+.box-contant1{
+    width: 100%;
+    height: 110px;
+    .left1{
+        flex: 1;
         background:url('../img/index-card-data.png'); 
         background-size: cover;
     }
-.right1{
-        width: 50%;
-        height: 110px;
-        background-color: salmon;
+    .right1{
+        flex: 1;
+        position: relative;
+        background:#9DBDE3 url('../img/index-card-badge.png') no-repeat;
+        background-size: 50%;
+        background-position: left bottom;
+        p{
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            font-size: 40px;
+        }
     }
+}
+
 .course{
-    width: 95%;
-    height: 110px;
-    background-color: powderblue;
+    background:url('../img/course-img04.jpg'); 
+    background-size: cover;
+    background-position: top center;
 }
 .outdoors{
-    width: 95%;
-    height: 110px;
-    background-color: powderblue;
+    background:url('../img/course-img02.png'); 
+    background-size: cover;
+    background-position: bottom center;
 }
-footer{
-    width: 100%;
-    height: 77px;
-    background-color: pink;
+.clock{
+    position: absolute;
+    right: 15px;
+    bottom: 25px;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #004E73;
+    border: 3px solid rgba(0, 81, 119, 100);
+    border-radius: 20px;
+    display: block;
 }
+.text-1{
+    position: relative;
+    top: 12px;
+    left: 15px;
+    color: #fff;
+}
+.text-2{
+    position: relative;
+    top: 15px;
+    left: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color:#035277 ;
+
+}
+.text-num{
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    font-size: 40px;
+}
+
+

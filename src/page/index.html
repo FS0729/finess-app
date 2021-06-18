@@ -9,22 +9,44 @@
 </head>
 
 <body class="dpflex flexcol">
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide bg1"></div>
-            <div class="swiper-slide bg2"></div>
-            <div class="swiper-slide bg3"></div>
+    <header>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide bg1"></div>
+                <div class="swiper-slide bg2"></div>
+                <div class="swiper-slide bg3"></div>
+            </div>
+            <div class="swiper-pagination"></div>
         </div>
-    </div>
+    </header>
     <main class="flex1 dpflex">
-        <div class="left br15 mt20"></div>
-        <div class="right br15 mt20"></div>
-        <div class="left1 br15 mt20"></div>
-        <div class="right1 br15 mt20"></div>
-        <div class="course br15 mt20"></div>
-        <div class="outdoors br15 mt20"></div>
+        <div class="box-contant dpflex">
+            <div class="left br15 mt20 mr20">
+                <div class="text-2">今日排行</div>
+                <span class="text-num" id="rank">9</span>
+            </div>
+            <div class="right br15 mt20">
+                <div class="text-2">累计打卡<span id="punchIn">23</span> 天</div>
+                <p class="clock" id="isPunch">今日打卡</p>
+            </div>
+        </div>
+
+        <div class="box-contant1 dpflex">
+            <div class="left1 br15 mt20 mr20">
+                <div class="text-1">运动数据</div>
+            </div>
+            <div class="right1 br15 mt20">
+                <div class="text-1">累计运动徽章</div>
+                <p><span id="insigniaNum">3</span>枚</p>
+            </div>
+        </div>
+        <div class="box-contant1 course br15 mt20">
+            <div class="text-1">课程训练</div>
+        </div>
+        <div class="box-contant1 outdoors br15 mt20">
+            <div class="text-1">户外运动</div>
+        </div>
     </main>
-    <footer></footer>
 </body>
 
 </html>

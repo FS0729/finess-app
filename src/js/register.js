@@ -93,14 +93,22 @@ document.ready(function () {
                 if (res.msg != 'OK') {
                     utils.toast(0, '该用户已被注册', 1.5)
                 } else {
-                    utils.toast(1, '注册成功', 1)
-                    setTimeout(function () {
-                        location.href = './index.html'
-                    }, 1000)
+                    login(data)
                 }
 
             })
         }
     })
+    function login(data) {
+        $http.post('/users/login', data, function (res) {
+            if (res.status == 0) {
+                utils.toast(1, '登录成功', 1)
+                setTimeout(function () {
+                    location.href = './index.html'
+                }, 1000)
+                localStorage.setItem('user', JSON.stringify(res.data.user))
+            }
+        })
+    }
 
 })
