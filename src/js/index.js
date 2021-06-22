@@ -41,7 +41,7 @@ document.ready(function () {
             if (res.status === 0) {
                 rankDom.textContent = res.data.rank
                 punchInDom.textContent = res.data.punchIn
-                insigniaNumDom.textContent = res.data.insigniaNum
+                insigniaNumDom.textContent = res.data.insigniaNum   
             }
         })
     }
@@ -49,13 +49,13 @@ document.ready(function () {
     // 点击打卡
     isPunchDom.addEventListener('click', function (ev) {
         $http.get('/clockIn?userId=' + user.userId, function (res) {
-            if (res.status === 0) {
-                isPunchDom.style.display = 'none'
+            if (res.status == 0) {
+                isPunchDom.style.display = 'block'
                 utils.toast(1, '打卡成功')
                 userInfo();
             } else {
                 utils.toast(0, res.msg)
-                isPunchDom.style.display = 'block'
+                isPunchDom.style.display = 'none'
             }
         })
     })

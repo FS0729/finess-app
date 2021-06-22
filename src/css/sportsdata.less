@@ -18,7 +18,11 @@ header{
             width: 60px;
             height: 60px;
             border-radius: 50%;
-            background-color: #ccc;
+            img{
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+            }
         }
     }
     .data{
@@ -29,6 +33,12 @@ header{
             flex: 1;
             justify-content: space-between;
         }
+        .left{
+            border-right: 1px solid #fff;
+        }
+        .right{
+            margin-left: 20px;
+        }
     }
     .day{
         justify-content: space-between;
@@ -37,4 +47,11 @@ header{
         color: #fff;
     }
     
+}
+main{
+    align-items: center;
+    div{
+        width: 90%;
+        height: 247px;
+    }
 }

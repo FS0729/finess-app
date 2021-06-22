@@ -15,33 +15,46 @@
         </div>
         <div class="sportsData dpflex">
             <p class="fs20 fw">我的运动数据</p>
-            <div class="right"></div>
+            <div class="right">
+                <img src="../img/dog.jpg" alt="">
+            </div>
         </div>
         <div class="data dpflex mb30">
-            <div class="dpflex flexcol">
+            <div class="dpflex flexcol left">
                 <p class="colorf7">总运动</p>
-                <p><span class="fs40">99999</span>分钟</p>
+                <p><span class="fs40" id="time">99999</span>分钟</p>
             </div>
-            <div class="dpflex flexcol">
+            <div class="dpflex flexcol right">
                 <p class="colorf7">本周消耗</p>
-                <p><span class="fs40">99999</span>分钟</p>
+                <p><span class="fs40" id="calorie">99999</span>千卡</p>
             </div>
         </div>
         <div class="day dpflex">
             <div>
-                <p class="colorf7 mb7">消耗</p>
+                <p class="colorf7 mb7">消耗(千卡)</p>
                 <p>999999</p>
             </div>
             <div>
-                <p class="colorf7 mb7">消耗</p>
+                <p class="colorf7 mb7">累计(天)</p>
                 <p>999999</p>
             </div>
             <div>
-                <p class="colorf7 mb7">消耗</p>
+                <p class="colorf7 mb7">连续(天)</p>
                 <p>999999</p>
             </div>
         </div>
     </header>
+    <main class="dpflex flexcol">
+        <!-- 柱状图 -->
+        <div id="main"></div>
+        <!-- 饼状图 -->
+        <div id="main1"></div>
+        <!-- 横向 -->
+        <div id="main2"></div>
+        <!-- 折线 -->
+        <div id="main3"></div>
+    </main>
+
 </body>
 
 </html>

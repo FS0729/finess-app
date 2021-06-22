@@ -81,7 +81,7 @@ function $updateFile(url, fdKey, fdValue, success) {
   const fd = new FormData();
   fd.append(fdKey, fdValue);
 
-  xhr.open('POST', url);
+  xhr.open('POST', BASE_URL + url);
   xhr.onreadystatechange = function () {
     if (xhr.readyState === 4 && xhr.status === 200) {
       const resData = JSON.parse(xhr.responseText)

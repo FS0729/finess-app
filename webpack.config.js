@@ -23,6 +23,7 @@ module.exports = {
         //三方插件
         captcha: './src/lib/captcha/captcha-mini.js',
         swiper: './src/lib/swiper/swiper-bundle.js',
+        weui: './src/lib/weui/weui.js',
 
         //多页面
         index: './src/js/index.js',
@@ -34,7 +35,9 @@ module.exports = {
         drill: './src/js/drill.js',
         amend: './src/js/amend.js',
         introduce: './src/js/introduce.js',
-        sportsdata: './src/js/sportsdata.js'
+        sportsdata: './src/js/sportsdata.js',
+        video: './src/js/video.js',
+        map: './src/js/map.js'
     },
     // 出口
     output: {
@@ -136,7 +139,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './src/page/amend.html',
             filename: 'amend.html',
-            chunks: ['amend', 'commonCSS', 'dom', 'http', 'utils']
+            chunks: ['amend', 'commonCSS', 'dom', 'http', 'utils', 'weui']
         }),
         // 运动数据
         new HtmlWebpackPlugin({
@@ -149,6 +152,18 @@ module.exports = {
             template: './src/page/introduce.html',
             filename: 'introduce.html',
             chunks: ['introduce', 'commonCSS', 'dom', 'http', 'utils']
+        }),
+        // 视频
+        new HtmlWebpackPlugin({
+            template: './src/page/video.html',
+            filename: 'video.html',
+            chunks: ['video', 'commonCSS', 'dom', 'http', 'utils']
+        }),
+        // 视频
+        new HtmlWebpackPlugin({
+            template: './src/page/map.html',
+            filename: 'map.html',
+            chunks: ['map', 'commonCSS', 'dom']
         }),
         new MiniCssExtractPlugin({
             filename: 'css/[name].css' // 输出到css文件夹里
@@ -166,7 +181,7 @@ module.exports = {
         port: 8080,  // 端口  8080 80  8081 8082
         open: true, // 自动打开服务
         publicPath: '/', // 静态资源查找路径
-        openPage: 'login.html', // 打开的页面
+        openPage: 'advertisement.html', // 打开的页面
     },
     target: 'web', // 目标是浏览器
 }
